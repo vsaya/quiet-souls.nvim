@@ -5,3 +5,17 @@ A Neovim theme with a more pragmatic take on syntax coloring, for quiet souls wh
 
 
 NOTE: This theme is a work in progress, expect small changes from time to time.
+
+# Installation
+
+Lazy:
+```lua
+{
+    "vsaya/quiet-souls.nvim"
+}
+```
+
+This is a dark theme, so make sure to set:
+
+`vim.o.background = "dark"`
+
