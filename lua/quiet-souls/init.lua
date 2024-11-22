@@ -6,8 +6,8 @@ end
 
 vim.g["colors_name"] = "quiet_souls"
 vim.o["termguicolors"] = true
--- keywords: #f5f5f5, #dcdcdc, #757575, #d4ccd1, #856e7b, #e6e4ba, #f5f3d7, #f5f3dd, #f5f5f5
-local quiet_souls = (((vim.o.background == "dark") and {bg00 = "#110e10", fg00 = "#FFFFFF", shade00 = "#FFFFFF", shade01 = "#ededed", shade02 = "#a9a6a6", shade03 = "#313131", soul00 = "#006600", soul01 = "#8dfc79", soul02 = "#98EA38", soul03 = "#d3c520", soul04 = "#e40509", soul05 = "#d38b20", soul06 = "#f8e7b6", soul07 = "#f4ffcc", soul08 = "#947a89", soul09 = "#c9f7c1", none = "NONE"}) or {bg00 = "#110e10", fg00 = "#212121", shade00 = "#363636", shade01 = "#0a0a0a", shade02 = "#636363", shade03 = "#313131", soul00 = "#006600", soul01 = "#8dfc79", soul02 = "#98EA38", soul03 = "#d3c520", soul04 = "#e40509", soul05 = "#d38b20", soul06 = "#f8e7b6", soul07 = "#f4ffcc", soul08 = "#947a89", soul09 = "#c9f7c1", none = "NONE"})
+-- keywords: #f5f5f5, #dcdcdc, #757575, #d4ccd1, #856e7b, #e6e4ba, #f5f3d7, #f5f3dd, #f5f5f5, #212121(inversion)
+local quiet_souls = (((vim.o.background == "dark") and {bg00 = "#110e10", fg00 = "#FFFFFF", shade00 = "#FFFFFF", shade01 = "#ededed", shade02 = "#a9a6a6", shade03 = "#313131", soul00 = "#006600", soul01 = "#8dfc79", soul02 = "#98EA38", soul03 = "#d3c520", soul04 = "#e40509", soul05 = "#d38b20", soul06 = "#f8e7b6", soul07 = "#f4ffcc", soul08 = "#947a89", soul09 = "#c9f7c1", soul10 = "#212121", none = "NONE"}) or {bg00 = "#110e10", fg00 = "#212121", shade00 = "#363636", shade01 = "#0a0a0a", shade02 = "#636363", shade03 = "#313131", soul00 = "#006600", soul01 = "#8dfc79", soul02 = "#98EA38", soul03 = "#d3c520", soul04 = "#e40509", soul05 = "#d38b20", soul06 = "#f8e7b6", soul07 = "#f4ffcc", soul08 = "#947a89", soul09 = "#c9f7c1", soul10 = "#f5f5f5", none = "NONE"})
 
 vim.g["terminal_color_0"] = quiet_souls.bg00
 vim.g["terminal_color_1"] = quiet_souls.soul00
@@ -34,11 +34,12 @@ vim.api.nvim_set_hl(0, "QuickFixLine", {fg = quiet_souls.none, bg = quiet_souls.
 vim.api.nvim_set_hl(0, "Error", {fg = quiet_souls.soul04, bg = quiet_souls.bg00})
 vim.api.nvim_set_hl(0, "LineNr", {fg = quiet_souls.shade02, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "NonText", {fg = quiet_souls.fg00, bg = quiet_souls.none})
+vim.api.nvim_set_hl(0, "Whitespace", {fg = quiet_souls.shade02, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "Normal", {fg = quiet_souls.shade00, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "Pmenu", {fg = quiet_souls.fg00, bg = quiet_souls.none})
-vim.api.nvim_set_hl(0, "PmenuSbar", {fg = quiet_souls.fg00, bg = quiet_souls.none})
-vim.api.nvim_set_hl(0, "PmenuSel", {fg = quiet_souls.soul02, bg = quiet_souls.none})
-vim.api.nvim_set_hl(0, "PmenuThumb", {fg = quiet_souls.fg00, bg = quiet_souls.none})
+vim.api.nvim_set_hl(0, "PmenuSbar", {fg = quiet_souls.fg00, bg = quiet_souls.soul01})
+vim.api.nvim_set_hl(0, "PmenuSel", {fg = quiet_souls.fg00, bg = quiet_souls.soul10, bold = true, italic = true})
+vim.api.nvim_set_hl(0, "PmenuThumb", {fg = quiet_souls.soul01, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "SpecialKey", {fg = quiet_souls.fg00, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "Visual", {fg = quiet_souls.none, bg = quiet_souls.soul00})
 vim.api.nvim_set_hl(0, "VisualNOS", {fg = quiet_souls.none, bg = quiet_souls.bg00})
@@ -282,7 +283,7 @@ vim.api.nvim_set_hl(0, "NormalNC", {fg = quiet_souls.fg00, bg = quiet_souls.none
 vim.api.nvim_set_hl(0, "TermCursor", {fg = quiet_souls.fg00, bg = quiet_souls.fg00})
 vim.api.nvim_set_hl(0, "TermCursorNC", {fg = quiet_souls.fg00, bg = quiet_souls.fg00})
 vim.api.nvim_set_hl(0, "StatusLine", {fg = quiet_souls.fg00, bg = quiet_souls.none})
-vim.api.nvim_set_hl(0, "StatusLineNC", {fg = quiet_souls.fg00, bg = quiet_souls.bg00})
+vim.api.nvim_set_hl(0, "StatusLineNC", {fg = quiet_souls.fg00, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "StatusReplace", {fg = quiet_souls.fg00, bg = quiet_souls.fg00})
 vim.api.nvim_set_hl(0, "StatusInsert", {fg = quiet_souls.fg00, bg = quiet_souls.soul00})
 vim.api.nvim_set_hl(0, "StatusVisual", {fg = quiet_souls.fg00, bg = quiet_souls.soul00})
